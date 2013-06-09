@@ -1,16 +1,17 @@
+document.writeln("entering");
 var xhr= new XMLHttpRequest(); 
 //true is for asynchronous, false is for synchronous 
-xhr.open("GET", "http://ec2-23-22-31-156.compute-1.amazonaws.com:3000/", true); 
+xhr.open("GET", "http://www.google.com", true); 
 
 xhr.onreadystatechange = function(){ 
 if (xhr.readyState == 4){ 
 if(xhr.status != 200){ 
 //do something 
+document.getElementById('cms-2').style.display = 'block';
 } 
 else{ 
 result = xhr.responseText; 
-print(result);
-document.writeln("success");
+document.getElementById('cms-1').style.display = 'block';
 } 
 } 
 }
